@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    background: linear-gradient(to bottom, #6c5ce7, #a29bfe);
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+    border-bottom-left-radius: 100% 100%;
+    border-bottom-right-radius: 100% 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.header .subheading {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+/* income section */
+
+#income-section {
+    background: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    margin: -4rem auto 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+#income-section h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #6c5ce7;
+}
+
+#income-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#income-form input,
+#income-form button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+#income-form button {
+     background: linear-gradient(to right, #6c5ce7, #a29bfe);
+     color: white;
+     border: none;
+     cursor: pointer;
+     transition: opacity 0.3s ease;
+}
+
+#income-form button:hover {
+    opacity: 0.85;
+}
+
+/* expense section */
+
+.interaction-box {
+    background: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    margin: -4rem auto 2rem;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+#expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#expense-form input,
+#expense-form button,
+#expense-form select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#expense-form button {
+    background: linear-gradient(to right, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#expense-form button:hover {
+    opacity: 0.85;
+}
+
+/* summary  */
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 90%;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.summary-item {
+    flex: 1 1 30%;
+    min-width: 120px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.summary-item:hover {
+    transform: scale(1.03);
+}
+
+.summary-item.income {
+  background: #eafaf1;
+  color: #2ecc71;
+}
+
+.summary-item.expense {
+  background: #fdecea;
+  color: #e74c3c;
+}
+
+.summary-item.balance {
+  background: #e8f4fd;
+  color: #2980b9;
+}
+
+@media (max-width: 600px) {
+    .summary {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .summary-item {
+        width: 100%;
+    }
+}

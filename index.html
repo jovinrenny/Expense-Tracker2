@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header -->
+
+    <div class="header">
+        <h1>Expense Tracker</h1>
+        <p class="subheading">by Jovin Renny</p>
+    </div>
+
+    <!-- the tracker container -->
+
+    <div id="income-section">
+        <h2>Enter Your Income</h2>
+        <form id="income-form">
+            <input type="number" id="income-amount" placeholder="Total Income (₹)" required/>
+            <button type="submit">Add Income</button>
+        </form>
+    </div>
+
+    <div id="expense-section" style="display: none;">
+        <div class="interaction-box">
+            <form id="expense-form">
+                <input type="number" name="" id="expense-amount" placeholder="Amount (₹)" required />
+                <select  id="category" required>
+                    <option value="Fuel">Fuel</option>
+                    <option value="Food">Food</option>
+                    <option value="Cinema">Cinema</option>
+                    <option value="Outing">Outing</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="expense-description" placeholder="description">
+                <input type="date" id="expense-date" required/>
+                <button type="submit">Add Expense</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="summary">
+        <div class="summary-item income">💰 Income: ₹0</div>
+        <div class="summary-item expense">💸 Expense: ₹0</div>
+        <div class="summary-item balance">📊 Balance: ₹0</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
