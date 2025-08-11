@@ -237,6 +237,7 @@ body {
 }
 
 #clear-btn {
+    display: none;
     background: #ff6b6b;
     color: white;
     border: none;
