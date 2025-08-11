@@ -53,12 +53,21 @@
         <div id="expenses-list"></div>
 
     </div>
-    <div class="reset-btn-field">
-         <input type="button" id="reset-btn">
-    </div>
-    
 
-   
+    <div class="clear-container">
+        <button id="clear-btn">🗑️ Clear All Data</button>
+    </div>
+
+    <div id="clear-modal" class="modal">
+        <div class="modal-contents">
+            <h3>Clear All data?</h3>
+            <p>This will remove all your income, expenses, and categories.</p>
+          <div class="modal-buttons">
+            <button id="cancel-clear">Cancel</button>
+            <button id="confirm-clear">Yes, Clear</button>
+          </div>
+        </div> 
+    </div>
 
     <script src="script.js"></script>
 </body>

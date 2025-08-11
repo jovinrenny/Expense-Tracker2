@@ -12,6 +12,10 @@ let categoryTotals = {
 
 const transactions = []
 
+const modal = document.getElementById("clear-modal")
+const confirmClearBtn = document.getElementById("confirm-clear")
+const cancelClearBtn = document.getElementById("cancel-clear")
+
 loadFromLocalStorage()
 
 
@@ -108,10 +112,15 @@ function loadFromLocalStorage() {
     }
 }
 
-document.getElementById("reset-btn").addEventListener("click", ()=> {
-    const confirmClear = confirm("Are you sure you want to clear all saved data")
-    if(confirmClear) {
-       localStorage.clear()
-        location.reload()
-    }
+document.getElementById("clear-btn").addEventListener("click", () => {
+    modal.style.display = "flex"
+})
+
+confirmClearBtn.addEventListener("click", ()=> {
+    localStorage.clear()
+    location.reload()
+})
+
+cancelClearBtn.addEventListener("click", ()=> {
+    modal.style.display = "none"
 })
